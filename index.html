@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IETE HIT SF Workshops</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <img src="tech-club-logo.webp" alt="Tech Club Logo" />
+    <h1>Tech Club Workshop Portal</h1>
+    <img src="college-logo.png" alt="College Logo" />
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li> Attendees
+          <ul>
+            <li onclick="showAttendees('dsa')">DSA</li>
+            <li onclick="showAttendees('iot')">IoT</li>
+            <li onclick="showAttendees('robotics')">Robotics</li>
+          </ul>
+        </li>
+        <li> Address
+          <ul>
+            <li onclick="goToMap('DSA Room')">DSA Room</li>
+            <li onclick="goToMap('IoT Lab')">IoT Lab</li>
+            <li onclick="goToMap('Robotics Arena')">Robotics Arena</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="poster-carousel" id="posterCarousel">
+        <div class="poster-container">
+          <img src="poster1.jpg" class="poster" onclick="showForm('DSA')" />
+          <div class="poster-desc">Master Data Structures and Algorithms with practical coding sessions.</div>
+        </div>
+        <div class="poster-container">
+          <img src="poster2.jpg" class="poster" onclick="showForm('IoT')" />
+          <div class="poster-desc">Dive into Internet of Things with sensors and real-world applications.</div>
+        </div>
+        <div class="poster-container">
+          <img src="poster3.jpg" class="poster" onclick="showForm('Robotics')" />
+          <div class="poster-desc">Build your first robot! Learn hardware and automation hands-on.</div>
+        </div>
+      </div>
+
+      <div class="form-container" id="registrationForm">
+        <h3>Register for <span id="workshop-name"></span> Workshop</h3>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
+        <button onclick="submitForm()">Submit</button>
+      </div>
+
+      <div class="attendees-list" id="attendeesList">
+        <h3>Attendees</h3>
+        <div id="dsa" class="attendees-table"><h4>DSA Attendees</h4><table></table></div>
+        <div id="iot" class="attendees-table"><h4>IoT Attendees</h4><table></table></div>
+        <div id="robotics" class="attendees-table"><h4>Robotics Attendees</h4><table></table></div>
+        <button id="backButton" onclick="returnHome()">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Page by: Koustav Nayak | Email: nayakdebdulal1@gmail.com | Phone: +91-8116190406
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
